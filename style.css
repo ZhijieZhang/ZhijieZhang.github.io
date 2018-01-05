@@ -20,32 +20,36 @@ body {
 }
 
 #about{
-    height: 100%;
+    height: auto;
     width: 100%;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 #education{
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 #skill{
-    height: 60%;
+    height: auto;
     width: 100%;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 #project{
-    height:90%;
+    height:auto;
     width:100%;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 #contact{
     background-color: rgba(33,125,187,0.8);
-    height:47%;
+    height:auto;
     width:100%;
     padding-top: 50px;
 }
@@ -147,7 +151,7 @@ body {
 }
 
 .education-block {
-    width: 800px;
+    width: auto;
     max-width: 800px;
     margin: 10px auto 30px;
     border: 2px solid lightblue;
