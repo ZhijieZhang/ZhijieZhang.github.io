@@ -232,4 +232,8 @@ header {
     .contact-info {
         text-align: center;
     }
+    .about-content img {
+        width: 300px;
+        /*float: left;*/
+    }
 }
