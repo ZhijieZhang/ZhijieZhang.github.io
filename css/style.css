@@ -57,7 +57,7 @@ hr {
 /*Header*/
 header {
     padding-top: 50px;
-    background: url(img/header-bg-1.jpg) no-repeat center center;
+    background: url(../img/header-bg-1.jpg) no-repeat center center;
     position: relative;
     background-size: cover;
     height: 100%;
