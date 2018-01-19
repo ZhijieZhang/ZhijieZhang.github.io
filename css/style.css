@@ -52,11 +52,23 @@ hr {
 .navbar-default .navbar-nav>li>a {
     text-transform: uppercase;
     color: darkgoldenrod;
+    transition: all 0.5s;
 }
+
+.navbar-default .navbar-nav>li>a:hover, #nav-highlight {
+    background-color: darkgoldenrod;
+    color: white;
+    font-size: 1.2em;
+}
+
+/*#nav-highlight {*/
+    /*background-color: darkgoldenrod;*/
+    /*color: white;*/
+/*}*/
 
 /*Header*/
 header {
-    padding-top: 50px;
+    padding-top: 0;
     background: url(../img/header-bg-1.jpg) no-repeat center center;
     position: relative;
     background-size: cover;
@@ -101,6 +113,7 @@ header {
     padding-left: 22px;
     padding-right: 22px;
     color: white;
+    transition: all 0.5s;
 }
 
 .header-content .btn:hover{
