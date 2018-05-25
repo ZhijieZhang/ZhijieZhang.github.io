@@ -62,31 +62,3 @@ function pageScrollTo(href){
 
 addLoadEvent(navLinksClick);
 addLoadEvent(scrollWithNavItem);
-
-// function pageScrollTo(final_y, interval){
-//     var ypos = window.pageYOffset;
-//     console.log("ypos before:" + ypos);
-//     var distance;
-//     if (document.body.movement){
-//         clearInterval(document.body.movement);
-//     }
-//     if (ypos === final_y){
-//         return true;
-//     }
-//     if (ypos < final_y){
-//         // distance = Math.ceil((final_y - ypos) / 10);
-//         // ypos += distance;
-//         ypos++;
-//     }
-//     if (ypos > final_y){
-//         distance = Math.ceil((ypos- final_y) / 10);
-//         ypos -= distance;
-//         // ypos--;
-//     }
-//     console.log("distance: " + distance);
-//     console.log("ypos after: " + ypos);
-//     console.log("final_y: " + final_y);
-//     window.scrollTo(0,ypos);
-//     console.log(window.pageYOffset);
-//     document.body.movement = setTimeout(pageScrollTo, interval, final_y, interval);
-// }
