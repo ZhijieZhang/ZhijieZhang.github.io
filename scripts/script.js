@@ -29,11 +29,12 @@ closeBtn.addEventListener('click', (event) => {
 for (let li of lis) {
 	li.addEventListener('click', () => {
 		let id = li.firstChild.nodeValue;
-
-		window.scroll({
-		  top: document.getElementById(id).offsetTop,
-		  behavior: 'smooth',
-		});	
+		let yDest = document.getElementById(id).offsetTop;
+		$('html,body').animate({scrollTop: yDest}, 1000);
+		// window.scroll({
+		//   top: document.getElementById(id).offsetTop,
+		//   behavior: 'smooth',
+		// });	
 	})
 }
 

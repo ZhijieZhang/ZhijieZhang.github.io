@@ -435,6 +435,7 @@ nav li:hover::after {
 	nav li {
 		display: block;
 		margin-top: 20px;
+		padding-left: 3px;
 	}
 
 	nav li:hover::after {
