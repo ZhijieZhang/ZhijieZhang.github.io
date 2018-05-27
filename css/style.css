@@ -35,13 +35,20 @@ section i {
 .container {
 	width: 1140px;
 	margin: 0px auto;
+	opacity: 0;
+	transition: all 1s;
+}
+
+.container.fadeIn {
+	opacity: 1;
 }
 
 /*Header*/
 
 header {
-	background-image: linear-gradient(rgba(0,131,176,0.7), rgba(0,180,219,0.7))
-									, url('../img/header-bg-1.jpg');
+/*	background-image: linear-gradient(rgba(0,131,176,0.7), rgba(0,180,219,0.7))
+									, url('../img/header-bg-1.jpg');*/
+	background: linear-gradient(#0083B0, #00B4DB);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -55,6 +62,7 @@ nav {
 nav li {
 	list-style: none;
 	display: inline-block;
+	padding-left: 13px;
 }
 
 .fa-bars {
@@ -64,12 +72,14 @@ nav li {
 a {
 	text-decoration: none;
 	color: white;
-	padding-left: 13px;
 }
 
-nav a::after {
+.fa-times-circle {
+	display: none;
+}
+
+nav li::after {
 	content: '';
-	transform: translateX(13px);
 	display: block;
 	width: 0;
 	margin-top: 2px;
@@ -78,8 +88,12 @@ nav a::after {
 	transition: width 0.3s ease-in-out;
 }
 
-nav a:hover::after {
-	width: 80%;
+nav li:hover {
+	cursor: pointer;
+}
+
+nav li:hover::after {
+	width: 100%;
 }
 
 .header-content {
@@ -362,8 +376,12 @@ nav a:hover::after {
 		width: 28%;
 	}
 
-	.header {
-		position: relative;
+	header {
+		background: linear-gradient(#0083B0, #00B4DB);
+	}
+
+	header, section {
+		transition: all 0.5s;
 	}
 
 	.header-content h1 {
@@ -391,30 +409,42 @@ nav a:hover::after {
 		width: 100%;
 	}
 
-	nav ul {
-		background: blue;
+	.fa-times-circle {
+		display: block;
 		position: absolute;
-		left: -25%;
-		top: 0;
-		width: 25%;
-		height: 660px;
+		top: 5px;
+		left: 13px;
 	}
 
-	nav ul .responsive {
+	.fa-times-circle {
+		cursor: pointer;
+	}
+
+	nav ul {
+		background: #39ccff;
+		position: fixed;
 		left: 0;
+		top: 0;
+		width: 0;
+		height: 100vh;
+		padding-top: 45px;
+		overflow-x: hidden;
+		transition: width 0.5s;
 	}
 
 	nav li {
 		display: block;
+		margin-top: 20px;
 	}
 
-	nav li:first-child {
-		padding-top: 18px;
+	nav li:hover::after {
+		width: 50%;
 	}
 
 	.fa-bars {
 		display: block;
-		transition: all 0.5s
+		color: #39ccff;
+		transition: all 0.5s;
 	}
 
 	.fa-bars:hover {
@@ -448,5 +478,101 @@ nav a:hover::after {
 
 	#contact .section-content {
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 650px) { 
+	.container {
+		width: 400px;
+	}
+
+	.resume-btn{
+		width: 35%;
+	}
+
+	#about h2::after {
+		transform: translateX(80%);
+	}
+
+	#education h2::after {
+		transform: translateX(64%);
+	}
+
+	#project h2::after {
+		transform: translateX(87%);
+	}
+
+	#skill h2::after {
+		transform: translateX(106%);
+	}
+
+	#contact h2::after {
+		transform: translateX(95%);
+	}
+}
+
+@media screen and (max-width: 512px) { 
+	html {
+		font-size: 16px;
+	}
+
+	.container {
+		width: 245px;
+	}
+
+	.resume-btn{
+		width: 48%;
+	}
+
+	.header-content {
+		padding: 180px 0;
+	}
+
+	#about h2::after {
+		transform: translateX(30%);
+	}
+
+	#education h2::after {
+		transform: translateX(22%);
+	}
+
+	#project h2::after {
+		transform: translateX(36%);
+	}
+
+	#skill h2::after {
+		transform: translateX(50%);
+	}
+
+	#contact h2::after {
+		transform: translateX(43%);
+	}
+
+	.education-date {
+		float: none;
+		font-size: 120%;
+		margin-bottom: 6px;
+	}
+
+	.project-container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 376px) { 
+	html {
+		font-size: 14px;
+	}
+
+	.container {
+		width: 245px;
+	}
+
+	.resume-btn{
+		width: 43%;
+	}
+
+	.header-content {
+		padding: 160px 0;
 	}
 }
