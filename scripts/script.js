@@ -31,10 +31,6 @@ for (let li of lis) {
 		let id = li.firstChild.nodeValue;
 		let yDest = document.getElementById(id).offsetTop;
 		$('html,body').animate({scrollTop: yDest}, 1000);
-		// window.scroll({
-		//   top: document.getElementById(id).offsetTop,
-		//   behavior: 'smooth',
-		// });	
 	})
 }
 
