@@ -1,7 +1,24 @@
 {
+	"env": {
+		"browser": true
+	},
 	"extends": "airbnb",
 	"rules": {
 		"linebreak-style": "off",
-		"comma-dangle": ["error", "never"]
-	}
+		"import/no-unresolved": "off",
+		"comma-dangle": [
+			"error",
+			"never"
+		]
+	},
+	"settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["Components", "./src/components"]
+        ],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
 }

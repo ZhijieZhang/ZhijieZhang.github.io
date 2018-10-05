@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: #F5F5F5;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 50px auto 0px auto;
+  display: flex;
+}

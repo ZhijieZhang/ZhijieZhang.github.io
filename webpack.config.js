@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
@@ -41,7 +41,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      components: path.resolve(__dirname, 'src/components/'),
+      Components: path.resolve(__dirname, 'src/components/')
     },
     extensions: ['.js', '.jsx']
   }
