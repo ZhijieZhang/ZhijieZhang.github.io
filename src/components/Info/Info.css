@@ -1,3 +1,38 @@
 .info {
-  flex-basis: 25%;
+  height: 50%;
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+}
+
+.info__main {
+  height: 70%;
+  background-color: rgb(48, 184, 247);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1.4em;
+  padding: 0.3em;
+}
+
+.info__img {
+  width: 70%;
+  height: 70%;
+  margin: 1em auto;
+  border-radius: 3.5em;
+}
+
+.info__job, .info__address, .info__name {
+  text-align: center;
+  color: white;
+}
+
+.info__job {
+  margin: 0.3em 0.3em;
+}
+
+.info__resume {
+  height: 15%;
+  background-color: #FFF;
 }

@@ -28,9 +28,19 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        use: 'file-loader'
+      },
+      {
+        test: /\.svg$/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {}
+        }
       }
     ]
-
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -41,7 +51,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      Components: path.resolve(__dirname, 'src/components/')
+      Components: path.resolve(__dirname, 'src/components/'),
+      Assets: path.resolve(__dirname, 'assets/')
     },
     extensions: ['.js', '.jsx']
   }
